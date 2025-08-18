@@ -4,9 +4,9 @@ import ProductCard, { Product } from '../components/ProductCard';
 import Button from '../components/Button';
 
 const featuredProducts: Product[] = [
-  { id: 1, name: 'Silk Saree', price: 120, image: '/images/silk-saree.jpg' },
-  { id: 2, name: 'Cotton Fabric', price: 30, image: '/images/cotton-fabric.jpg' },
-  { id: 3, name: 'Wool Shawl', price: 50, image: '/images/wool-shawl.jpg' },
+  { id: 1, name: 'Tiles', price: 120, image: '/images/silk-saree.jpg' },
+  { id: 2, name: 'Tiles', price: 30, image: '/images/cotton-fabric.jpg' },
+  { id: 3, name: 'Tiles', price: 50, image: '/images/wool-shawl.jpg' },
 ];
 
 const Home: React.FC = () => {
