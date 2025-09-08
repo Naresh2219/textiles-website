@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-white mb-3">Get in Touch</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> <span>+91 70954 32678</span>
+              <Phone size={16} /> <span>+91 93924470**</span>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> <span>cn818280@gmail.com</span>
+              <Mail size={16} /> <span>vdtilesco@gmail.com</span>
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> <span>Hyderabad, India</span>
