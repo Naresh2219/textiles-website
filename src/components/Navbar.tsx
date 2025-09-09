@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <h1 className="text-2xl font-extrabold text-rose-600 font-sans tracking-wide">
-          VDTilesCo
+          VDTiles
         </h1>
 
         {/* Desktop Menu */}

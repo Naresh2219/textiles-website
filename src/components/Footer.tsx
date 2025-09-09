@@ -6,6 +6,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  FacebookIcon,
 } from "lucide-react"; // install lucide-react
 
 const Footer: React.FC = () => {
@@ -53,10 +54,10 @@ const Footer: React.FC = () => {
           <h3 className="text-lg font-semibold text-white mb-3">Get in Touch</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> <span>+91 93924470**</span>
+              <Phone size={16} /> <span>+91  8019538669</span>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> <span>vdtilesco@gmail.com</span>
+              <Mail size={16} /> <span>vdmarketing96@gmail.com</span>
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={16} /> <span>Hyderabad, India</span>
@@ -64,13 +65,13 @@ const Footer: React.FC = () => {
           </ul>
           {/* Socials */}
           <div className="flex gap-4 mt-4">
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.instagram.com/vdmarketing96?utm_source=qr&igsh=MXFveno1cXJvbHBzeA==" className="hover:text-yellow-400">
               <Facebook size={20} />
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.instagram.com/vdmarketing96?utm_source=qr&igsh=MXFveno1cXJvbHBzeA==" className="hover:text-yellow-400">
               <Instagram size={20} />
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.instagram.com/vdmarketing96?utm_source=qr&igsh=MXFveno1cXJvbHBzeA==" className="hover:text-yellow-400">
               <Twitter size={20} />
             </a>
           </div>

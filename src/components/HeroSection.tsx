@@ -2,10 +2,10 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full h-[500px] md:h-[600px]">
+    <section className="relative w-full h-[500px] md:h-[400px]">
       {/* Background Image */}
       <img
-        src="/images/tile-banner.png"
+        src="/images/vd_marketing_logo.jpg"
         alt="Tiles Background"
         className="w-full h-full object-cover"
       />

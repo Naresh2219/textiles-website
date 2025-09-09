@@ -4,9 +4,9 @@ import ProductCard, { Product } from "../components/ProductCard";
 import Button from "../components/Button";
 
 const featuredProducts: Product[] = [
-  { id: 1, name: "Marble Floor Tile", price: 120, image: "/images/marble-tile.jpg" },
-  { id: 2, name: "Granite Wall Tile", price: 90, image: "/images/granite-tile.jpg" },
-  { id: 3, name: "Ceramic Bathroom Tile", price: 60, image: "/images/ceramic-tile.jpg" },
+  { id: 1, name: "Marble Floor Tile", price: 120, image: "/images/close-up-marble-textured-wall.jpg" },
+  { id: 2, name: "Granite Wall Tile", price: 90, image: "/images/still-life-putting-up-decorative-vinyls.jpg" },
+  { id: 3, name: "Ceramic Bathroom Tile", price: 60, image: "/images/top-view-boards-mdf-material.jpg" },
 ];
 
 const Home: React.FC = () => {

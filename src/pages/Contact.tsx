@@ -1,7 +1,39 @@
-import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react"; // install lucide-react if not already
+import React, { useState } from "react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // Handle input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submit -> Send to WhatsApp
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const whatsappNumber = "8341899891"; // Your number with country code (91 = India)
+    const whatsappMessage = `📩 New Contact Form Submission:
+👤 Name: ${formData.name}
+📧 Email: ${formData.email}
+💬 Message: ${formData.message}`;
+
+    // Redirect to WhatsApp chat
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        whatsappMessage
+      )}`,
+      "_blank"
+    );
+  };
+
   return (
     <section className="container mx-auto px-6 py-16">
       <h2 className="text-4xl font-extrabold text-slate-800 mb-10 text-center">
@@ -10,26 +42,41 @@ const Contact: React.FC = () => {
 
       <div className="grid md:grid-cols-2 gap-10">
         {/* Contact Form */}
-        <form className="bg-white shadow-lg rounded-xl p-6 space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white shadow-lg rounded-xl p-6 space-y-4"
+        >
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            required
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            required
           />
           <textarea
+            name="message"
             placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
             className="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            required
           />
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-yellow-400 text-slate-900 font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition"
+            className="w-full px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition"
           >
-            Send Message
+            Send on WhatsApp
           </button>
         </form>
 
@@ -43,10 +90,10 @@ const Contact: React.FC = () => {
               <MapPin size={18} className="text-yellow-500" /> Hyderabad, India
             </p>
             <p className="flex items-center gap-2 text-gray-600 mb-2">
-              <Phone size={18} className="text-yellow-500" /> +91 70954 32678
+              <Phone size={18} className="text-yellow-500" /> +91 8019538669
             </p>
             <p className="flex items-center gap-2 text-gray-600 mb-4">
-              <Mail size={18} className="text-yellow-500" /> cn818280@gmail.com
+              <Mail size={18} className="text-yellow-500" /> vdmarketing96@gmail.com
             </p>
           </div>
 
